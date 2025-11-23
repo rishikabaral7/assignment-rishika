@@ -33,10 +33,10 @@ micronaut:
 
 datasources:
   default:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5444}/${DB_NAME:payment_platform}
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5434}/${DB_NAME:payment_platform}
     driverClassName: org.postgresql.Driver
-    username: ${DB_USER:admin}
-    password: ${DB_PASSWORD:admin}
+    username: ${DB_USER:rishu}
+    password: ${DB_PASSWORD:rishu}
     dialect: POSTGRES
     schema-generate: NONE
     maximum-pool-size: 10
@@ -84,8 +84,7 @@ logger:
     io.micronaut: INFO
     io.micronaut.data: DEBUG
 
-# OpenAPI Configuration
-micronaut:
+  # OpenAPI Configuration
   openapi:
     enabled: true
   views:

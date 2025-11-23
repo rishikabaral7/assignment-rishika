@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:16
+    container_name: postgres
+    environment:
+      POSTGRES_USER: rishu
+      POSTGRES_PASSWORD: rishu
+      POSTGRES_DB: payment_platform
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: rishu@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: rishu
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

@@ -1,0 +1,63 @@
+.txn-filters {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.04);
+}
+.txn-filter-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.txn-date {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+.txn-to {
+  color: #6b7280;
+}
+.txn-status {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+.txn-search {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  flex: 1 1 auto;
+}
+.txn-filter-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.btn-apply {
+  background: #0ea5e9; /* app primary blue */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-clear {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .txn-filter-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .txn-filter-actions {
+    justify-content: center;
+  }
+}

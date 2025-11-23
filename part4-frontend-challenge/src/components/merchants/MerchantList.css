@@ -1,0 +1,99 @@
+.merchant-list {
+  padding: 24px;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+.merchant-list h2 {
+  margin: 0 0 24px 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+.merchants-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.merchants-table thead {
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.merchants-table thead tr {
+  border: none;
+}
+
+.merchants-table thead th {
+  padding: 14px 16px;
+  text-align: left;
+  color: #374151;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+.merchants-table thead th:first-child {
+  padding-left: 20px;
+}
+
+.merchants-table thead th:last-child {
+  text-align: center;
+}
+
+.merchants-table tbody tr {
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.merchants-table tbody tr:hover {
+  background-color: #fafbfc;
+}
+
+.merchants-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.merchants-table tbody td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #6b7280;
+  vertical-align: middle;
+}
+
+.merchants-table tbody td:first-child {
+  padding-left: 20px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.merchants-loading {
+  text-align: center;
+  padding: 48px 24px;
+  background: white;
+  border-radius: 8px;
+  color: #6b7280;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.merchants-empty {
+  text-align: center;
+  padding: 48px 24px;
+  background: white;
+  border-radius: 8px;
+  color: #6b7280;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

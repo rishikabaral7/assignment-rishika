@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/layout/Header';
 import { Transactions } from './pages/Transactions';
 import { Merchants } from './pages/Merchants';
+import MerchantPage from './pages/MerchantPage';
 import { Reports } from './pages/Reports';
 import './App.css';
 
@@ -25,10 +26,11 @@ function App() {
   return (
     <div className="app">
       <Header />
-      
+
       <Routes>
         <Route path="/" element={<Transactions />} />
         <Route path="/merchants" element={<Merchants />} />
+        <Route path="/merchants/:id" element={<MerchantPage />} />
         <Route path="/reports" element={<Reports />} />
       </Routes>
     </div>

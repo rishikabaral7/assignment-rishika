@@ -1,0 +1,52 @@
+.merchant-page {
+  padding: 20px;
+  position: relative;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.merchant-page-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.merchant-page-actions {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 10;
+}
+
+.merchant-page-actions .btn-primary {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.merchant-edit-form {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(2, 6, 23, 0.06);
+}
+
+@media (min-width: 900px) {
+  .merchant-page-body {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .merchant-edit-form {
+    flex: 1 1 45%;
+  }
+
+  .merchant-details-panel {
+    flex: 1 1 55%;
+  }
+}

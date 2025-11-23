@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FilterState, DEFAULT_FILTERS } from '../types/transaction';
 import { TransactionList } from '../components/common/TransactionList';
 import { TransactionSummary } from '../components/common/TransactionSummary';
+import TransactionFilters from '../components/common/TransactionFilters';
 import { useTransactions } from '../hooks/useTransactions';
 
 /**
@@ -10,7 +11,7 @@ import { useTransactions } from '../hooks/useTransactions';
  */
 export const Transactions = () => {
   const merchantId = import.meta.env.VITE_DEFAULT_MERCHANT_ID || 'MCH-00001';
-  const [filters] = useState<FilterState>(DEFAULT_FILTERS);
+  const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
 
   const { data, loading, error } = useTransactions(merchantId, filters);
 
@@ -19,11 +20,8 @@ export const Transactions = () => {
       <h1>Transaction Dashboard</h1>
       <p className="subtitle">Merchant: {merchantId}</p>
 
-      {/* TODO: Add TransactionFilters component */}
       <div className="filters-section">
-        <p style={{ padding: '1rem', background: '#fef3c7', borderRadius: '8px', color: '#92400e' }}>
-          🔧 TODO: Implement TransactionFilters component (date range, status filter)
-        </p>
+        <TransactionFilters filters={filters} onChange={setFilters} />
       </div>
 
       {error && (
@@ -41,15 +39,15 @@ export const Transactions = () => {
       {data && (
         <>
           <div className="summary-section">
-            <TransactionSummary 
-              transactions={data.transactions || []} 
+            <TransactionSummary
+              transactions={data.transactions || []}
               totalTransactions={data.totalTransactions || 0}
             />
           </div>
 
           <div className="transactions-section">
-            <TransactionList 
-              transactions={data.transactions || []} 
+            <TransactionList
+              transactions={data.transactions || []}
               loading={loading}
             />
           </div>

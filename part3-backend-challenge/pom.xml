@@ -165,6 +165,37 @@
             <version>3.24.2</version>
             <scope>test</scope>
         </dependency>
+        <!-- Flyway for DB migrations -->
+        <dependency>
+            <groupId>io.micronaut.flyway</groupId>
+            <artifactId>micronaut-flyway</artifactId>
+            <version>6.0.2</version> <!-- use latest compatible version -->
+        </dependency>
+        <!-- Micronaut JDBC -->
+        <dependency>
+            <groupId>io.micronaut.data</groupId>
+            <artifactId>micronaut-data-jdbc</artifactId>
+        </dependency>
+
+        <!-- Micronaut Data Processor (compile-time) -->
+        <dependency>
+            <groupId>io.micronaut.data</groupId>
+            <artifactId>micronaut-data-processor</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- PostgreSQL driver -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Micronaut JDBC Hikari connection pool -->
+        <dependency>
+            <groupId>io.micronaut.sql</groupId>
+            <artifactId>micronaut-jdbc-hikari</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
